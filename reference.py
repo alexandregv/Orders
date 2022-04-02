@@ -28,6 +28,7 @@ def rgb_to_hex(rgb):
 	return '#' + (('%02x%02x%02x' % rgb).upper())
 
 formatted_out = '[\n'
+first = True
 
 for x in range(1000):
 	for y in range(1000):
@@ -37,8 +38,12 @@ for x in range(1000):
 		hex = rgb_to_hex((colors[0], colors[1], colors[2]))
 		colorid = color_mappings[hex]
 		orders.append([x, y, colorid])
-		formatted_out += '[' + str(x) + ', ' + str(y) + ', ' + str(colorid) + '],\n'
+		if not first:
+			formatted_out += ',\n'
+		else:
+			first = False
+		formatted_out += '[' + str(x) + ', ' + str(y) + ', ' + str(colorid) + ']'
 
-formatted_out += ']'
+formatted_out += '\n]'
 
 print(formatted_out)
