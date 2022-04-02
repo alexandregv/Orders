@@ -1,22 +1,22 @@
 # Orders
 
-Deze repo bevat de pixels die door de bot geplaatst moeten worden. Pixels die het eerst in de lijst staan worden als eerste geprobeerd. Bij aanvallen dus **vooraan** de lijst zetten.
+This repo contains the pixels to be placed by the bot. Pixels that are first in the list are tried first. So when attacked, put **at the front** of the list.
 
 ## Format
 
-Orders worden gegerenereerd met het `reference.py` script, met `reference.png` als referentie.
+Orders are generated with the `reference.py` script, with `reference.png` as reference.
 
 ![reference](reference.png)
 
-`orders.json` gebruikt een vrij simpel format. Het is een array, die bestaat uit arrays met drie items.
+`orders.json` uses a fairly simple format. It is an array, consisting of arrays with three items.
 
-- 0: de x-coordinaat van de pixel
-- 1: de y-coordinaat van de pixel
-- 2: de kleur van de pixel, zie mapping hieronder
+- 0: the x-coordinate of the pixel
+- 1: the y-coordinate of the pixel
+- 2: the color of the pixel, see mapping below
 
-`[x, y, kleur],`
+`[x, y, color],`
 
-Voorbeeld:
+Example:
 
 ```
 [0, 0, 2],
@@ -24,6 +24,6 @@ Voorbeeld:
 [0, 2, 12]
 ```
 
-Kleuren-mapping:
+Color-mapping:
 
-![kleuren-mapping](colors.png)
+![color-mapping](colors.png)
