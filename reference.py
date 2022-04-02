@@ -30,7 +30,7 @@ def rgb_to_hex(rgb):
 formatted_out = '[\n'
 first = True
 
-for x in range(1000):
+for x in range(2000):
 	for y in range(1000):
 		colors = pix[x, y]
 		if colors[3] == 0:
