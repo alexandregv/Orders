@@ -1,7 +1,7 @@
 import json
 from PIL import Image
 
-im = Image.open('reference.png') 
+im = Image.open('reference_first_logo.png') 
 pix = im.load()
 
 color_mappings = {
@@ -30,7 +30,7 @@ def rgb_to_hex(rgb):
 formatted_out = '[\n'
 first = True
 
-for x in range(2000):
+for x in range(1000):
 	for y in range(1000):
 		colors = pix[x, y]
 		if colors[3] == 0:
